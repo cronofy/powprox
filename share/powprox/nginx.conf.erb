@@ -87,6 +87,12 @@ http {
 
     root "$pow_host_root/$pow_host/public";
 
+    location /fake_s3 {
+      root "$pow_host_root/$pow_host/tmp";
+      autoindex on;
+      add_header content-encoding gzip;
+    }
+
     location / {
       try_files $uri @powprox;
     }
