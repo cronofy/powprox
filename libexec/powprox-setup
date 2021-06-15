@@ -145,9 +145,6 @@ generate_nginx_config
 echo "Launching Nginx"
 nginx_launchdaemon
 
-echo "Nginx self-test… "
-nginx_selftest
-
 echo "Installing ~/.pow watcher"
 install_pow_reloader
 
